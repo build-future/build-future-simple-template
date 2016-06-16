@@ -1,0 +1,115 @@
+@mixin spin-key($deg) {
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}
+
+$unit_angle: 36deg;
+
+@keyframes spin {
+  0% {
+    @include spin-key(0deg);
+  }
+  10% {
+    @include spin-key($unit_angle*1);
+  }
+  20% {
+    @include spin-key($unit_angle*2);
+  }
+  30% {
+    @include spin-key($unit_angle*3);
+  }
+  40% {
+    @include spin-key($unit_angle*4);
+  }
+  50% {
+    @include spin-key($unit_angle*5);
+  }
+  60% {
+    @include spin-key($unit_angle*6);
+  }
+  70% {
+    @include spin-key($unit_angle*7);
+  }
+  80% {
+    @include spin-key($unit_angle*8);
+  }
+  90% {
+    @include spin-key($unit_angle*9);
+  }
+  100% {
+    @include spin-key($unit_angle*10);
+  }
+}
+
+.block {
+
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  left: 50%;
+  margin-left: -50px;
+  top: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+  position: relative;
+  > span {
+    vertical-align: top;
+    line-height: 200%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  &.ondrag {
+    background-color:rgba(135, 142, 77, 0.78) ;
+    box-shadow: 5px 5px 10px #ccc;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    -moz-opacity: 0.5;
+    -ms-opacity: 0.5;
+    opacity: 0.5;
+  }
+  &.current{
+    border: 5px dotted white;
+  }
+
+  &:hover{
+    cursor: pointer;
+  }
+
+  &:nth-child(1){
+    top: 100px;
+    background-color: yellow;
+  }
+  &:nth-child(2){
+    top: 200px;
+    background-color: lightgreen;
+  }
+  &:nth-child(3){
+    top: 300px;
+    background-color: mediumpurple;
+  }
+  &:nth-child(4){
+    top: 400px;
+    background-color: lightblue;
+  }
+  &:nth-child(5){
+    top: 500px;
+    background-color: hotpink;
+  }
+  &:nth-child(6){
+    top: 600px;
+  }
+}
+
+.spin {
+  -webkit-animation: spin 5s infinite;
+  -o-animation: spin 5s infinite;
+  animation: spin 5s infinite;
+}
