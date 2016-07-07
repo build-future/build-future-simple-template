@@ -277,9 +277,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-connect');
 
-    grunt.registerTask('default',['clean:dev']);
     grunt.registerTask('build',['clean:all','copy:static','sass:all','concat:all','jshint','uglify:all','cssmin:all','htmlmin:all','connect:server','watch']);
     grunt.registerTask('rebuild',['clean:all','copy:static','sass:all','concat:all','jshint','uglify:all','cssmin:all','htmlmin:all']);
+    grunt.registerTask('default',['build']);
 
     grunt.event.on('watch', function(action, filepath, target) {
         grunt.log.writeln(target + ': ' + filepath + ' has ' + action);

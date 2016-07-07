@@ -1,4 +1,4 @@
-[![SimpleTemplate@BuildFuture](https://secure.travis-ci.org/Modernizr/Modernizr.png?branch=master)](http://travis-ci.org/Modernizr/Modernizr)
+[![SimpleTemplate@BuildFuture](https://github.com/samuelzuuka/buildfuture-simple-template.git)]
 =========================================================================================================================================================
 
 ### a Simple Project Template integrated with sass,grunt,bower and a static server with 'npm connect'

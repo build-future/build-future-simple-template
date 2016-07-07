@@ -7,6 +7,10 @@
     "test": "node server.js",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samuelzuuka/buildfuture-simple-template.git"
+  },
   "keywords": [
     "@BuildFuture",
     "Template",
