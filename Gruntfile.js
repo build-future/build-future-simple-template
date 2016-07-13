@@ -66,7 +66,12 @@ module.exports = function (grunt) {
                     { expand:true,
                         cwd: '<%=srcName %>',
                         src: 'lib/**',
-                        dest:'<%=dest %>lib'
+                        dest:'<%=dest %>'
+                    },
+                    { expand:true,
+                        cwd: '<%=srcName %>',
+                        src: 'data/**',
+                        dest:'<%=dest %>'
                     }
                 ]
             },
